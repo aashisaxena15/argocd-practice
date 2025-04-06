@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+   name: app-helm
+spec:
+   project: default
+   destination:
+     server: https://kubernetes.default.svc
+     namespace: default
+   source:
+     helm:
+        releaseName: chart
+        valueFiles:
+           - custom-values.yaml
+     repoURL: https://github.com/aashisaxena15/argocd-practice.git
+     path: mychart
+     targetRevision: master
+
+ 

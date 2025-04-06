@@ -1,0 +1,5 @@
+replicaCount: "2"
+image: "vimal13/apache-webserver-php"
+image.tag: "latest"
+
+
