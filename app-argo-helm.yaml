@@ -11,7 +11,7 @@ spec:
      helm:
         releaseName: chart
         valueFiles:
-           - "./custom-values.yaml"
+           - "../custom-values.yaml"
      repoURL: https://github.com/aashisaxena15/argocd-practice.git
      path: mychart
      targetRevision: master
