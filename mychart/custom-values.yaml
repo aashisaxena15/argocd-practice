@@ -1,0 +1,7 @@
+replicaCount: 2
+
+image:
+  repository: vimal13/apache-webserver-php
+  tag: latest
+
+

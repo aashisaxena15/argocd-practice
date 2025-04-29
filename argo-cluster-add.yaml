@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: external-staging-cluster
+  labels:
+    argocd.argoproj.io/secret-type: cluster
+    environment: staging
+type: Opaque
+stringData:
+  name: staging-cluster
+  server: https://192.168.49.2:8443
+  config: |
+    {
+      "bearerToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6Ii1wZm9BQ21kMTJ5WUs4ZEsyRFpGX0szcVRDVkhCV0VTWkxrenU4QTdGYkEifQ.eyJhdWQiOlsiaHR0cHM6Ly9rdWJlcm5ldGVzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWwiXSwiZXhwIjoxNzQ0MjcyODY1LCJpYXQiOjE3NDQyNjkyNjUsImlzcyI6Imh0dHBzOi8va3ViZXJuZXRlcy5kZWZhdWx0LnN2Yy5jbHVzdGVyLmxvY2FsIiwianRpIjoiOTIzNzA0MDMtNmU2ZS00NDhlLTgzNWEtOWMxMWNiODAxZDJiIiwia3ViZXJuZXRlcy5pbyI6eyJuYW1lc3BhY2UiOiJkZWZhdWx0Iiwic2VydmljZWFjY291bnQiOnsibmFtZSI6InN0YWdpbmctY2x1c3Rlci1zYSIsInVpZCI6IjY2MmYyOWIwLTZiMzYtNDgwOS1hNjJmLTdmYzYyMjUwMzMyOCJ9fSwibmJmIjoxNzQ0MjY5MjY1LCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6ZGVmYXVsdDpzdGFnaW5nLWNsdXN0ZXItc2EifQ.UQfI0y6wCLnS70Blv0RJyt1hIVtd2VmzdFQQTP31tYgBcHQb6lIwB-40GqG0fVPw2j-DdrRC5pt1Y6_o7gbhyzP6xz0ah9KGwFdN1HjaC0lJBnCmZBrNCXs-6uWEB4nRcV6lLBRr1z4RVdvHUJumjTX4EZfOxqMdr-EEOduCRUzv9vIjmn0gdd5imDFjqAHrFh7ve3GIZbhc2gQCapnClycU1ZkoXqMZUNnUUNyr6RXePuZQN5ZEiGwy7YNX4GKJLjDNrpwicj8CDg0nn4YL8hgYf-0ggzpMUMElqjogHSCcxDPIr-nLwcz4YTRL5uk9BLb4URo5UtvtOm7Y-2Hsfg",
+      "tlsClientConfig": {
+        "insecure": true
+      }
+    }
+
